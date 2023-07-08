@@ -72,6 +72,9 @@ app.get('/godfather',(req,res)=>{
     .then((movie)=>{
         res.render('godfather',movie)
     })
+    .catch(err=>{
+        console.log(err)
+    })
 })
 
 
@@ -85,6 +88,9 @@ app.get('/movies/:title/',(req,res)=>{
         console.log(oneMovie)
         res.render('movie-details',oneMovie)
     })
+    .catch(err=>{
+        console.log(err)
+    })
 })
 
 
@@ -96,6 +102,9 @@ app.get('/search',(req,res)=>{
         res.render('search',{searchResult})
 
     })
+    .catch(err=>{
+        console.log(err)
+    })
 })
 
 app.get('/search-exercise',(req,res)=>{
@@ -104,6 +113,9 @@ app.get('/search-exercise',(req,res)=>{
     .then((oneMovie)=>{
         console.log(oneMovie)
         res.render('search',oneMovie)
+    })
+    .catch(err=>{
+        console.log(err)
     })
 
 })
@@ -118,6 +130,9 @@ app.post('/movies/new',(req,res)=>{
     Movie.create({title,poster,director,rate,year})
     .then(()=>{
         res.redirect('/movies')
+    })
+    .catch(err=>{
+        console.log(err)
     })
 })
 //create a route to handle searching
