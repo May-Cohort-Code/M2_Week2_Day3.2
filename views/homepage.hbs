@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Homepage</h1>
+
+    <h2>Search for Movie</h2>
+    <form action="/search" method="GET">
+        <label>
+            Title
+            <input type="text" name="title">
+        </label>
+        <label>
+            Director
+            <input type="text" name="director">
+        </label>
+        <button>Search</button>
+    </form>
+    <br>
+
+    <h1>Exact search</h1>
+    <form action="/search-exercise">
+        <label for="">
+            <input type="text" name="title">
+        </label>
+        <button>Search</button>
+    </form>
+    <a href="/movies">go to movies</a>
+
+
+    <br>
+    <h1>Sign up</h1>
+    <form action="/sign-up" method="POST">
+        <label for="">
+            username
+            <input type="text" name="username">
+        </label>
+        <label for="">
+            password
+            <input type="password" name="password">
+        </label>
+        <button>Sign Up</button>
+    </form>
+
+    <br>
+    <form action="/movies/new" method="POST">
+        <label for="">
+            title
+            <input type="text" name="title">
+        </label> 
+        <label for="">
+            director
+            <input type="text" name="director">
+        </label> <label for="">
+            rate
+            <input type="number" name="rate">
+        </label> <label for="">
+            year
+            <input type="number" name="year">
+        </label>
+                <label for="">
+            poster
+            <input type="text" name="poster">
+        </label>
+        <button>create new movie</button>
+    </form>
+</body>
+
+</html>
